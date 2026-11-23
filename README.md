@@ -33,7 +33,7 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
  * ```logging.level.org.hibernate.SQL, logging.level.org.hibernate.orm.jdbc.bind``` opsiyonları ile oluşan sqlleri inceleyin.
 
 ### Görev 2
- * Dao paketi altında ```MovieDao``` ve  ```ActorDao``` isminde iki interface oluşturun.
+ * Dao paketi altında ```MovieRepository``` ve  ```ActorRepository``` isminde iki interface oluşturun.
  * içerisinde şu işlemleri yapıcak methodları tanımlamalısınız.
  * Bu iki interface de movie ve actor için ```CRUD``` işlemlerini yapabilmeli.
  * Service paketinin içine CRUD işlemlerini tanımlayabileceğiniz interface ve sınıfları yazın.

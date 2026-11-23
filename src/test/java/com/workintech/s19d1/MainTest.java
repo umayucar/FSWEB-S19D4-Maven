@@ -13,7 +13,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -66,7 +65,7 @@ class MainTest {
         movie.setId(1L);
         movie.setName("Example Movie");
         movie.setDirectorName("Jane Doe");
-        movie.setRating(8);
+        movie.setRating(8.0);
         movie.setReleaseDate(LocalDate.of(2020, 1, 1));
         actorService = new ActorServiceImpl(mockActorRepository);
         movieService = new MovieServiceImpl(mockMovieRepository);

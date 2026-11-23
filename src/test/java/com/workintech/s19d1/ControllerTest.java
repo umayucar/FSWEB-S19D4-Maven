@@ -22,7 +22,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.List;
 
 import static org.hamcrest.Matchers.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -60,12 +59,15 @@ class ControllerTest {
         Movie movie = new Movie();
         movie.setId(1L);
         movie.setName("Sample Movie");
-        movie.setRating(5);
+        movie.setRating(5.0);
         movie.setDirectorName("Sample Director");
 
         actor.setMovies(Arrays.asList(movie));
 
-        actorRequest = new ActorRequest();
+        actorRequest = new ActorRequest(
+                actor,
+                Arrays.asList(movie)
+        );
         actorRequest.setActor(actor);
         actorRequest.setMovies(Arrays.asList(movie));
     }
